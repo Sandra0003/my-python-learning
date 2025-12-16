@@ -1,19 +1,5 @@
 from math import *
 
-from orca.debug import eventDebugLevel
-
-print("*")
-print("**")
-print("***")
-print("***")
-print("**")
-print("*")
-
-
-print("   /|")
-print("  / |")
-print(" /  |")
-print("/   |")
 
 char_name = "sam"
 print(char_name)
@@ -118,6 +104,53 @@ while True:
     cont = input("Do you want to continue?(y/n)")
     if cont == "n":
         break
+
+#     lists
+numbers = [1,2,3,4,5]
+
+print(numbers.append(8))
+print(numbers.insert(0,10))
+print((numbers.remove(4)))
+print(numbers.pop(0))
+print(numbers)
+for num in numbers:
+    print(num)
+
+if 2 in numbers:
+    print("yes")
+
+
+# lists functions
+names =["sasa","gjhj"]
+names.extend(numbers)
+print(names)
+
+names.clear()
+print(names)
+
+nums =[22,33,4,1,34,0,1,1,1,1]
+nums.sort()
+print(nums)
+nums.reverse()
+print(nums)
+print(nums.count(1))
+nums2= nums.copy()
+print(nums2)
+
+
+# tuple
+
+tup =("apple","orange")
+
+a,b =tup
+print(a)
+print(b)
+print(tup)
+
+tup2=[(1,2),(2,3),(3,3)]
+print(tup2[2])
+
+# function
 
 
 
