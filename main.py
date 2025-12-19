@@ -193,5 +193,11 @@ def countVowel(str):
 
 print(countVowel("hellow"))
 
+def mostrep():
+    mostrepeated = []
+    for num in numbers:
+        if countVowel(num) > len(mostrepeated):
+            mostrepeated = [num]
+            print(mostrepeated)
 
 
