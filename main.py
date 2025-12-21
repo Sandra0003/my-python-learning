@@ -193,11 +193,16 @@ def countVowel(str):
 
 print(countVowel("hellow"))
 
-def mostrep():
-    mostrepeated = []
-    for num in numbers:
-        if countVowel(num) > len(mostrepeated):
-            mostrepeated = [num]
-            print(mostrepeated)
+def mostrepeatedVowel(str):
+    vowels ='aeiou'
+    max_count = 0
+    result = ""
+    for ch in vowels:
+        count = str.count(ch)
+        if count > max_count:
+            max_count = count
+            result = ch
+    return result
 
-
+ans = mostrepeatedVowel("haiiii")
+print(ans)
