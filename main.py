@@ -193,7 +193,7 @@ def countVowel(str):
 
 print(countVowel("hellow"))
 
-def mostrepeatedVowel(str):
+def most_repeated_Vowel(str):
     vowels ='aeiou'
     max_count = 0
     result = ""
@@ -204,5 +204,12 @@ def mostrepeatedVowel(str):
             result = ch
     return result
 
-ans = mostrepeatedVowel("haiiii")
+ans = most_repeated_Vowel("haiiii")
 print(ans)
+
+
+def cube_a_num(num):
+    return num * num * num
+
+res=cube_a_num(2)
+print(res)
