@@ -213,3 +213,26 @@ def cube_a_num(num):
 
 res=cube_a_num(2)
 print(res)
+
+# dictionary
+
+student_two ={
+    "name":"sara",
+    "age": 56,
+    "addres":"jkjkj"
+}
+print(student_two["name"])
+print(student_two.get("name"))
+student_two["city"] = "kerala"
+print(student_two)
+student_two["age"] = 10
+print(student_two)
+
+student_two.pop("city")
+print(student_two)
+
+for ke in student_two:
+    print(ke)
+
+for values in student_two.values():
+    print(values)
