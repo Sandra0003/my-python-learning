@@ -236,3 +236,18 @@ for ke in student_two:
 
 for values in student_two.values():
     print(values)
+
+for key,value in student_two.items():
+    print(key,value)
+
+# count frequency
+
+def count_frequency(str):
+    freq = {}
+    for ch in str:
+        count = str.count(ch)
+        if ch not in freq:
+            freq[ch] = count
+    return freq
+
+print(count_frequency("haiii"))
