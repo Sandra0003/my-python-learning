@@ -1,10 +1,10 @@
-# from math import *
-#
-#
-# char_name = "sam"
-# print(char_name)
-# isMale = False
-# print(isMale)
+from math import *
+
+
+char_name = "sam"
+print(char_name)
+isMale = False
+print(isMale)
 #
 # print("\n Sandra \n and\n savio  \n are \n  siblings")
 #
