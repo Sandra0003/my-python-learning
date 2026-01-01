@@ -251,3 +251,14 @@ def count_frequency(str):
     return freq
 
 print(count_frequency("haiii"))
+
+# set
+my_set = {1,1,1,2}
+my_set.add(3)
+print(my_set)
+
+
+names= ["san","ponn","san","lol"]
+# names.add("man")
+print(names)
+print(set(names))
