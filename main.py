@@ -255,6 +255,8 @@ print(count_frequency("haiii"))
 # set
 my_set = {1,1,1,2}
 my_set.add(3)
+my_set.remove(1)
+my_set.discard(7)
 print(my_set)
 
 
@@ -262,3 +264,43 @@ names= ["san","ponn","san","lol"]
 # names.add("man")
 print(names)
 print(set(names))
+
+seta = {1,2,3,4,5,6,7}
+setB = {2,8,10,11,12,12}
+print(seta | setB)
+print(seta & setB)
+print(seta - setB)
+print(setB - seta)
+
+nums = [2,3,4,5,6,7,8]
+even = [n for n in nums if n % 2 == 0]
+print(even)
+
+# loops
+
+for i in range(1,10):
+    print(i)
+# printed 1 to 9
+
+# range(start,stop,step)
+for i in range(1,10,2):
+    print(i)
+
+# loop through set
+sety = {1,2,3,4,5,6,7}
+
+for i in sety:
+    print(i)
+
+# while
+
+yop = 7
+while yop <= 10:
+    print(yop,"po")
+    yop = yop +1
+
+for i in range(1,10):
+    if i == 4:
+        pass
+    else:
+        print(i, "pass do nothing for now")
