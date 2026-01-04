@@ -322,12 +322,5 @@ menu()
 
 
 
-students_mini = {
-    "name":"laiala",
-    "mark": [12,34,56,76,54]
-}
-
-def addstudent():
-    students_mini.append(input("Enter student name: "))
 
 
