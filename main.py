@@ -308,17 +308,41 @@
 
 print("Student Management")
 
-def menu():
-    print("1. Add Student")
-    print("2. Edit Student")
-    print("3. Delete Student")
-    print("4. Exit")
-    choice = int(input("Enter your choice: "))
-    if choice == 1:
-        addstudent()
-        print("Student Added")
+mini_student ={}
 
+def addstudent():
+    student = input("Enter Student Name: ")
+
+    marks =[]
+    for i in range(5):
+        mark = int(input("Enter Marks: "))
+        marks.append(mark)
+    mini_student["name"] = student
+    mini_student["marks"] = marks
+
+def menu():
+    while True:
+        print("1. Add Student")
+        print("2. Edit Student")
+        print("3. Delete Student")
+        print("4. Print Student")
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            addstudent()
+            print("Student Added")
+        elif choice == "4":
+            print(mini_student)
+
+        ans = input("do you want to continue?")
+        if ans == "y":
+            menu()
+        else:
+            print("Thank You")
 menu()
+
+
+
+print(mini_student)
 
 
 
