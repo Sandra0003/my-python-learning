@@ -365,6 +365,10 @@ def menu():
             break
 menu()
 
+# file handling
+file = open("student.txt","w")
+file.write(mini_student)
+file.close()
 
 
 
