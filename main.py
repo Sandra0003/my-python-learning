@@ -317,8 +317,27 @@ def addstudent():
     for i in range(5):
         mark = int(input("Enter Marks: "))
         marks.append(mark)
-    mini_student["name"] = student
-    mini_student["marks"] = marks
+    mini_student[student] = marks
+
+def editStudent():
+    student = input("Enter Student Name to edit: ")
+    if student in mini_student:
+        marks=[]
+        for i in range(5):
+            mark =int(input("enter marks"))
+            marks.append(mark)
+        mini_student[student] = marks
+    else:
+        print("student not found")
+
+
+def deleteStudent():
+    student = input("Enter Student Name to delete: ")
+    if student in mini_student:
+        mini_student.pop(student)
+    else:
+        print("student not found")
+
 
 def menu():
     while True:
@@ -330,19 +349,24 @@ def menu():
         if choice == "1":
             addstudent()
             print("Student Added")
+        elif choice == "2":
+            editStudent()
+
+        elif choice == "3":
+            deleteStudent()
         elif choice == "4":
             print(mini_student)
-
         ans = input("do you want to continue?")
         if ans == "y":
             menu()
         else:
+
             print("Thank You")
+            break
 menu()
 
 
 
-print(mini_student)
 
 
 
