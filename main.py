@@ -1,4 +1,5 @@
 # from math import *
+import os
 #
 #
 # char_name = "sam"
@@ -306,71 +307,91 @@
 #         print(i, "pass do nothing for now")
 # mini project
 
-print("Student Management")
-
-mini_student ={}
-
-def addstudent():
-    student = input("Enter Student Name: ")
-
-    marks =[]
-    for i in range(5):
-        mark = int(input("Enter Marks: "))
-        marks.append(mark)
-    mini_student[student] = marks
-
-def editStudent():
-    student = input("Enter Student Name to edit: ")
-    if student in mini_student:
-        marks=[]
-        for i in range(5):
-            mark =int(input("enter marks"))
-            marks.append(mark)
-        mini_student[student] = marks
-    else:
-        print("student not found")
-
-
-def deleteStudent():
-    student = input("Enter Student Name to delete: ")
-    if student in mini_student:
-        mini_student.pop(student)
-    else:
-        print("student not found")
-
-
-def menu():
-    while True:
-        print("1. Add Student")
-        print("2. Edit Student")
-        print("3. Delete Student")
-        print("4. Print Student")
-        choice = input("Enter your choice: ")
-        if choice == "1":
-            addstudent()
-            print("Student Added")
-        elif choice == "2":
-            editStudent()
-
-        elif choice == "3":
-            deleteStudent()
-        elif choice == "4":
-            print(mini_student)
-        ans = input("do you want to continue?")
-        if ans == "y":
-            menu()
-        else:
-
-            print("Thank You")
-            break
-menu()
+# print("Student Management")
+#
+# mini_student ={}
+#
+# def addstudent():
+#     student = input("Enter Student Name: ")
+#
+#     marks =[]
+#     for i in range(5):
+#         mark = int(input("Enter Marks: "))
+#         marks.append(mark)
+#     mini_student[student] = marks
+#
+# def editStudent():
+#     student = input("Enter Student Name to edit: ")
+#     if student in mini_student:
+#         marks=[]
+#         for i in range(5):
+#             mark =int(input("enter marks"))
+#             marks.append(mark)
+#         mini_student[student] = marks
+#     else:
+#         print("student not found")
+#
+#
+# def deleteStudent():
+#     student = input("Enter Student Name to delete: ")
+#     if student in mini_student:
+#         mini_student.pop(student)
+#     else:
+#         print("student not found")
+#
+#
+# def menu():
+#     while True:
+#         print("1. Add Student")
+#         print("2. Edit Student")
+#         print("3. Delete Student")
+#         print("4. Print Student")
+#         choice = input("Enter your choice: ")
+#         if choice == "1":
+#             addstudent()
+#             print("Student Added")
+#         elif choice == "2":
+#             editStudent()
+#
+#         elif choice == "3":
+#             deleteStudent()
+#         elif choice == "4":
+#             print(mini_student)
+#         ans = input("do you want to continue?")
+#         if ans == "y":
+#             menu()
+#         else:
+#
+#             print("Thank You")
+#             break
+# menu()
 
 # file handling
-file = open("student.txt","w")
-file.write(mini_student)
-file.close()
+# file = open("student.txt","w")
+# file.write("hai sandra")
+# file = open("student.txt","r")
+# content = file.read()
+# print(content)
+#
+# file.close()
+
+with open("student.txt","w") as file:
+    file.write("hai hello\n")
+    file.write("hlo")
+    file.write("opipokp\n")
 
 
+with open("student.txt","r") as file:
+    like = file.read()
+    print(like)
+
+try:
+    file=open("abc.txt","r")
+    like = file.read()
+    print(like)
+    file.close()
+except:
+    print("file not found")
 
 
 
